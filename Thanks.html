@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="four.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icon.png" type="image/png">
+    <link rel="stylesheet" href="exit.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="icon" href="icon.png" type="image/png" sizes="16x32">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Alpar Consulting">
+    <link rel="apple-touch-icon" href="logo.png">
+    <title>Alpar</title>
+</head>
+
+<body>
+    <div class="exit" style="text-align: right;">
+        <button onclick="exitpage()" type="button"><i style="color: grey;" class="fa fa-times"
+                aria-hidden="true"></i></button>
+    </div>
+    <center>
+        <div class="img">
+            <p>Thanks for your message. We will be in touch soon.</p>
+            <img src="icon.png" alt="ALPAR">
+        </div>
+    </center>
+
+    <script src="exit.js"></script>
+    <script src="serviceworker.js"></script>
+    <script>
+        function exitpage() {
+            Confirm1.open({
+                title: 'Exit Page',
+                message: 'Are you sure to exit',
+                onok: () => {
+                    let new_window =
+                        open(location, '_self');
+
+                    // Close this window
+                    new_window.close();
+                }
+            })
+        }
+    </script>
+
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('serviceworker.js')
+                    .then((reg) => console.log('Success: ', reg.scope))
+                    .catch((err) => console.log('Failure: ', err));
+            })
+        }
+    </script>
+</body>
+
+</html>

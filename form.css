@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    font-family: 'Poppins',sans-serif;
+}
+/*body{
+    background: linear-gradient(to bottom, #eff3f2 0%, #f7f8fc 100%);
+}*/
+body{
+    height: 115vh;
+    justify-content: center;
+    align-items: center;
+    /*background: linear-gradient(to bottom, #eff3f2 0%, #f7f8fc 100%);*/
+  }
+  
+.logo{
+    margin-top: 8px;
+    margin-bottom: 10px;
+  }
+  
+.logo img{
+    width: 17%;
+    display: block;
+    margin: auto;
+    }
+.logo-text img{
+    height: 8vw;
+}
+.logo-text{
+    justify-content: center;
+    text-align: center;
+    font-weight: bolder;
+    color: white;
+    letter-spacing: 2vw;
+    /* padding: 2px 18px 14px 7px; */
+    padding-top: 4px;
+    font-size: 1.5rem;
+}
+.card{
+    max-width: 350px;
+    width: 100%;
+    margin: 5px auto;
+    background: #fff;
+    border-radius: 5px;
+    padding: 6px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+
+    }
+      
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0rem 5rem;
+    transition: all 0.2s 0.7s;
+    overflow: hidden;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+.input-field{
+    max-width: 380px;
+    width: 174%;
+    background-color: #ddd;
+    margin: 10px 0;
+    height: 6.5vw;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    padding: 0 0.4rem;
+    position: relative;
+    border-radius: 5px;
+}
+.message-field{
+    max-width: 380px;
+    width: 174%;
+    background-color: #ddd;
+    margin: 10px 0;
+    height: 16.5vw;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    padding: 0 0.4rem;
+    position: relative;
+    border-radius: 7px;
+}
+
+select{
+  border: none;
+  width: 100%;
+  background-color: #f0f0f0;
+  color:#aaa;
+  font-weight: 500;
+}
+.input-field i{
+    text-align: center;
+    line-height: 6.5vw;
+    color: #acacac;
+    transition: 0.5s;
+    font-size: 1.1rem;
+}
+.message-field i{
+    text-align: center;
+    line-height: 4.5vw;
+    color: #acacac;
+    transition: 0.5s;
+    font-size: 1.1rem;
+}
+
+.input-field input{
+    background: none;
+    outline: none;
+    border: none;
+    line-height: 1;
+    font-weight: 400;
+    font-size: 16px;
+    color: #333;
+}
+.message-field textarea{
+    background: none;
+    outline: none;
+    border: none;
+    line-height: 2.5;
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.input-field input::placeholder{
+    color: #aaa;
+    font-weight: 500;
+}
+.message-field textarea::placeholder{
+    color: #aaa;
+    font-weight: 500;
+}
+
+.btn{
+    width: 10vw;
+    background-color: #1f8aaa;
+    border: none;
+    outline: none;
+    height: 3.7vw;
+    border-radius: 3.7vw;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 1vw 0;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.btn:hover{
+    background-color: skyblue;
+    color: black;
+}
+h3{
+    color: #1f8aaa;
+    width: 152%;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+.logo3{
+    width: 75%;
+}
+#name:enabled ~ input.name{
+  border-color:  #1f8aaa;
+  background:   #87d2e9;
+}
+.input-field placeholder{
+    color: aquamarine;
+}
+#submit{
+display: block;
+margin: auto;
+}
+@media (max-width:550px){
+   .logo img{
+    width: 35%;
+   }
+   .input-field{
+    height: 9.6vw;
+    width: 169%;
+    border-radius: 7px;
+} 
+.message-field{
+    height: 35vw;
+    width: 169%;
+    border-radius: 7px;
+}
+.input-field i, .message-field i{
+   text-align: center;
+   line-height: 9.6vw;
+   color: #acacac;
+   transition: 0.5s;
+   font-size: 1.1rem;
+   padding: 0px 13px 0px 0px;
+}
+.message-field textarea {
+line-height: 2;
+}
+
+.btn{
+    width: 32vw;
+    height: 13vw;
+    border-radius: 13vw;
+  }
+  .input-field, .message-field {
+    font-size: 15px;
+    background: #ddd;
+    margin-top: 3px;
+    padding: 7px 12px;
+    display: flex;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+}
+

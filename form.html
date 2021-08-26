@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="Alpar Consulting">
+  <link rel="apple-touch-icon" href="logo.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alpar</title>
+  <link rel="icon" href="icon.png" sizes="16x32" type="image/png">
+  <link rel="stylesheet" href="form.css">
+  <link rel="stylesheet" href="pop.css">
+  <link rel="stylesheet" href="services.css">
+  <link rel="stylesheet" href="exit.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+  <section id="click1">
+    <div class="logo">
+      <img src="icon.png" alt="">
+  </div>
+  
+<div class="card">
+  <div class="title">Specialist Engineering Services</div>
+<div class="content">
+  <input type="checkbox" name="t1" id="one" class="rd" value="Engineering Management">
+  <input type="checkbox" name="t2" id="two" class="rd" value="System & Safety Assurance">
+  <input type="checkbox" name="t3" id="three" class="rd" value="Risk Management">
+
+  <label for="one" class="box first" value="Engineering Management">
+    <div class="plan">
+    <span class="circle"></span>
+    <span class="yearly">Engineering Management</span>
+  </div>
+  </label>
+  
+  <label for="two" class="box second">
+    <div class="plan">
+    <span class="circle"></span>
+    <span class="yearly">System & Safety Assurance </span>
+  </div>
+   </label>
+  <label for="three" class="box third">
+    <div class="plan">
+    <span class="circle"></span>
+      <span class="yearly">Risk Management</span>
+    </div>
+  </label>
+</div>
+</div>
+<div class="card">
+  <div class="title">Tech Services</div>
+<div class="content">
+  <input type="checkbox" name="t22" id="four" class="rd" value="Business Intelligence">
+  <input type="checkbox" name="t22" id="five" class="rd" value="Organisational Systems">
+
+  <label for="four" class="box four">
+  
+    <div class="plan">
+    <span class="circle"></span>
+    <span class="yearly">Business Intelligence</span>
+  </div>
+  </label>
+  <label for="five" class="box five">
+    <div class="plan">
+    <span class="circle"></span>
+    <span class="yearly">Organisational Systems</span>
+  </div>
+  </label>
+</div>
+</div>
+<div class="card">
+  <div class="title">Support Length</div>
+<div class="content">
+  <input type="checkbox" name="t33" id="seven" class="rd" value="Single Project">
+  <input type="checkbox" name="t33" id="eight" class="rd" value="Ad hoc support">
+  <input type="checkbox" name="t33" id="nine" class="rd" value="Long term resource">
+
+  <label for="seven" class="box seven">
+    <div class="plan">
+    <span class="circle"></span>
+    <span class="yearly">Single Project</span>
+  </div>
+  </label>
+  <label for="eight" class="box eight">
+    <div class="plan">
+    <span class="circle"></span>
+    <span class="yearly">Ad hoc support</span>
+  </div>
+  </label>
+  <label for="nine" class="box nine">
+    <div class="plan">
+    <span class="circle"></span>
+      <span class="yearly">Long term resource</span>
+    </div>
+  </label>
+</div>
+</div>
+
+<textarea type="text" id="message1" placeholder="services" cols="30" rows="10" style="display: none;"></textarea>
+<a href="#click"><input type="submit" id="submit2" onclick="myfunction()"
+  value="Quick assist" class="btn solid"></a>
+
+  </section>
+  <section id="click" style="display: none;">
+  <div class="container">
+    <div class="logo">
+      <img src="icon.png">
+    </div>
+    <div class="card">
+      <div class="contact-form">
+        <form action="javascript:submitToAPI(e)" method="POST" class="form" name="contact-form">
+
+
+          <!--<div class="input-field">
+            <i class="fa fa-window-restore" aria-hidden="true"></i>
+            <select class="" aria-label="Default select example" name="Service" required>
+                <option selected>  <span>Service Sector</span></option>
+                <option value="Resource">Resource</option>
+                <option value="SME Quicktips">SME Quicktips</option>
+                <option value="Discussion with SME">Discussion with SME</option>
+              </select>
+        </div>-->
+          <div class="input-field">
+            <i class="fa fa-user" aria-hidden="true"></i>
+            <input type="text" placeholder="Name*" name="Name" id="name" class="name" required>
+          </div>
+          <div class="input-field">
+            <i class="fa fa-building" aria-hidden="true"></i>
+            <input type="text" placeholder="Industry / Company*" name="Company" id="company" required>
+          </div>
+          <div class="input-field">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+            <input type="email" placeholder="Email*" name="Email" id="email" required>
+          </div>
+          <div class="input-field">
+            <i class="fa fa-phone" aria-hidden="true"></i>
+            <input type="tel" placeholder="Phone" name="Phone" id="phone">
+          </div>
+          <div class="message-field">
+            <i class="fa fa-comments-o" aria-hidden="true"></i>
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="Message / Enquiry"></textarea>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+  <input onclick="submitToAPI(event)" type="submit" id="submit" value="Submit" class="btn solid"></a>
+</section>
+  <!--<a href="four.html"> <input onClick="submitToAPI(event)"  type="submit" id="submit" value="Submit" class="btn solid"></a>-->
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="serviceworker.js"></script>
+  <script src="api.js"></script>
+  <script src="pop.js"></script>
+  <script src="exit.js"></script>
+
+
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--<script>
+    //https://jjmutmdkl0.execute-api.us-east-2.amazonaws.com/stage2
+    //https://jjmutmdkl0.execute-api.us-east-2.amazonaws.com/stage2/contact-us-res
+    function submitToAPI(e) {
+      e.preventDefault();
+      var URL = "https://jjmutmdkl0.execute-api.us-east-2.amazonaws.com/stage2/contact-us-res";
+      //var Namere = /[A-Za-z]{1}[A-Za-z]/;
+      // if (!Namere.test($("#name").val())) {
+      //            alert ("Name can not less than 2 char");
+      //  return;
+      // }
+      if ($("#name").val() == "") {
+        //alert ("Please enter your email id");
+        Confirm.open({
+          title: 'Empty Field!',
+          message: 'Please enter your name',
+        })
+        return;
+      }
+      if ($("#company").val() == "") {
+        Confirm.open({
+          title: 'Empty Field!',
+          message: 'Please enter your company',
+        })
+        //alert("please enter you company");
+        return;
+      }
+      if ($("#email").val() == "") {
+        //alert ("Please enter your email id");
+        Confirm.open({
+          title: 'Empty Field!',
+          message: 'Please enter your email id',
+        })
+        return;
+      }
+
+      var reeamil = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,6})?$/;
+      if (!reeamil.test($("#email").val())) {
+        // alert ("Please enter valid email address");
+        Confirm.open({
+          title: 'Invalid Email!',
+          message: 'Please enter valid email address',
+        })
+        return;
+      }
+      // var mobilere = /[0-9]{10}/;
+      // if (!mobilere.test($("#phone").val())) {
+      //  alert ("Please enter valid mobile number");
+      // return;
+      // }
+
+
+
+      var name = $("#name").val();
+      var phone = $("#phone").val();
+      var email = $("#email").val();
+      var message = $("#message").val();
+      var company = $("#company").val();
+      var data = {
+        name: name,
+        company: company,
+        email: email,
+        phone: phone,
+        message: message,
+      };
+
+      $.ajax({
+        type: "POST",
+        url: "https://jjmutmdkl0.execute-api.us-east-2.amazonaws.com/stage2/contact-us-res",
+        dataType: "json",
+        crossDomain: "true",
+        contentType: "application/json; charset=utf-8",
+        data: JSON.stringify(data),
+      }).then(
+        window.location.href = "Thanks.html",
+      );
+
+    }
+    </script>-->
+    
+  
+  <!--<script type="text/javascript">
+function sendEmail(){
+      var name = $('#name').val();
+           var email = $('#email').val();
+           var company = $('#company').val();
+           var phone = $('#phone').val();
+           var message = $('#message').val();
+      var Body='Name: ' +name+ '<br>Email: ' +email+ '<br>Company: ' +company+ 
+      '<br>Phone: ' +phone+ '<br>Message: ' +message;
+     
+   Email.send({
+    
+    Subject : "You have a new query",
+    Body : Body
+})
+Email.send({
+   
+  Subject : "Thanks for submitting your query.",
+ Body : 'Dear, ' +name+ '<br>Thanks for contacting us. '+'<br><br>We have received the following message:'+'<br><br>'+'<i>'+ Body + '</i>' + '<br><br>We will be in touch shortly.'+'<br>Kind regards,'+'<br>ALPAR Team'
+})
+.then(
+    Confirm.open({
+      title: 'Thanks for contacting us.',
+      message: 'We will be in touch soon.',
+    })
+    );
+    }
+
+
+
+
+
+    
+</script>-->
+<script>
+  function myfunction(){
+    document.getElementById("click").style.display = "block";
+    document.getElementById("click1").style.display = "none";
+  }
+</script>
+  
+  <script src="exit.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+    $('.rd').click(function(){
+      var text = "";
+      $('.rd:checked').each(function(){
+        text+=$(this).val()+ ', ';
+    });
+    text=text.substring(0,text.length-1);
+    $("#message1").val(text);
+      });
+    });
+    </script>
+   
+
+
+
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('serviceworker.js')
+          .then((reg) => console.log('Success: ', reg.scope))
+          .catch((err) => console.log('Failure: ', err));
+      })
+    }
+  </script>
+</body>
+
+</html>
